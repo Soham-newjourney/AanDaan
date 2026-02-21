@@ -1,0 +1,169 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: url("https://t3.ftcdn.net/jpg/03/19/40/54/360_F_319405443_lnH13ovYQLkC4ELcX9awjrkDAuZBiRPK.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 260px;
+    padding: 30px 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #00ffb3;
+    letter-spacing: 1px;
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar button:hover {
+    background: linear-gradient(45deg, #00ffb3, #ff6ec7);
+    color: black;
+    transform: translateX(6px);
+}
+
+/* ================= MAIN CONTENT ================= */
+.content {
+    flex: 1;
+    padding: 60px;
+}
+
+.content h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+/* ================= TRANSPARENT GLASS CARD ================= */
+.section-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 22px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    margin-bottom: 35px;
+    transition: all 0.4s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= INPUT FIELDS ================= */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.3);
+    color: white;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.9);
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #00ffb3;
+    background: rgba(255,255,255,0.45);
+}
+
+/* ================= BUTTONS ================= */
+.content button {
+    padding: 12px 22px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    background: linear-gradient(45deg, #00ffb3, #ff6ec7);
+    color: black;
+}
+
+.content button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= INFO BOX (Dummy Data Ready) ================= */
+.info-box {
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+}
+
+/* ================= HIDDEN SECTIONS ================= */
+.section-hidden {
+    display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar button {
+        flex: 1 1 40%;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
